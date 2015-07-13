@@ -5,6 +5,7 @@
 //  Created by Jiamao Zheng on 7/13/15.
 //  Copyright (c) 2015 Emerge Media. All rights reserved.
 //http://kaflurbaleen.blogspot.com/2014/05/dropdown-menu-like-things-on-ios-made.html
+//http://stackoverflow.com/questions/650131/checkbox-in-iphone-application
 
 #import "ViewController.h"
 
@@ -26,24 +27,23 @@
     
     
     //check button
-//    [self.checkBtn setTitle:@"\u2610" forState:UIControlStateNormal];    // uncheck the button in normal state
-//    [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];
+    [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];
+    [self.checkBtn setTitle:@"\u2610" forState:UIControlStateNormal];    // uncheck the button in normal state
+//    [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];  // check the button in selected state
 }
 
 - (IBAction)checkButtonTapped:(UIButton *)sender {
-    NSLog(@"clicked"); 
+  
     sender.selected = !sender.selected;    // toggle button's selected state
     
     if (sender.state == UIControlStateSelected) {
-        [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];
+  NSLog(@"checked");
         // do something when button is checked
     } else {
-         [self.checkBtn setTitle:@"\u2610" forState:UIControlStateNormal];
+          NSLog(@"not checked");
         // do something when button is unchecked
     }
 }
-
-
 
 - (UIView *)createPicker {
     
