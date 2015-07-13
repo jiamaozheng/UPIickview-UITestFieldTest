@@ -23,7 +23,27 @@
     
 
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    //check button
+//    [self.checkBtn setTitle:@"\u2610" forState:UIControlStateNormal];    // uncheck the button in normal state
+//    [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];
 }
+
+- (IBAction)checkButtonTapped:(UIButton *)sender {
+    NSLog(@"clicked"); 
+    sender.selected = !sender.selected;    // toggle button's selected state
+    
+    if (sender.state == UIControlStateSelected) {
+        [self.checkBtn setTitle:@"\u2611" forState:UIControlStateSelected];
+        // do something when button is checked
+    } else {
+         [self.checkBtn setTitle:@"\u2610" forState:UIControlStateNormal];
+        // do something when button is unchecked
+    }
+}
+
+
 
 - (UIView *)createPicker {
     
@@ -67,5 +87,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

@@ -9,12 +9,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIPickerViewDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *pickViewer;
 
 @property (weak, nonatomic) IBOutlet UILabel *icon;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *checkBtn;
+- (IBAction)checkButtonTapped:(UIButton *)sender;
 
 @end
 
