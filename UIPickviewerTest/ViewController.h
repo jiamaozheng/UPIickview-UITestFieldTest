@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pickViewer;
 
 @property (weak, nonatomic) IBOutlet UILabel *icon;
+@property (weak, nonatomic) IBOutlet UITextField *time;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *checkBtn;
